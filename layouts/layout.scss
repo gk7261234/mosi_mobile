@@ -1,0 +1,54 @@
+.mosi-layout {
+  height: 100%;
+  background-color: transparent;
+  .mosi-layout__header {
+    position: fixed;
+    width: 100%;
+    // 滚动透明度
+    // background-color: rgba($color: #000000, $alpha: 1);
+    border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.2);
+    z-index: 1000;
+  }
+  .header-top {
+    background-color: rgba($color: #000000, $alpha: 0.3);
+  }
+  .header-other {
+    background-color: rgba($color: #000000, $alpha: 1);
+  }
+  .mosi-layout__content {
+    background-color: black;
+    // background-color: #fafafa;
+  }
+  .mosi-layout__footer {
+    padding: 0;
+  }
+  .test-image {
+    width: 100%;
+  }
+  .mosi-layout__back {
+    position: fixed;
+    top: 48vh;
+    right: 6px;
+    width: 2.5vw;
+    height: 2.5vw;
+    background: #FF931E;
+    transition: all 1s;
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 1.1vw;
+      // height: 1.3vw;
+    }
+    // color: #fff;
+    // text-align: center;
+    // border-radius: 2px;
+  }
+  .back-show {
+    opacity: 1;
+  }
+  .back-hidden {
+    opacity: 0;
+  }
+}

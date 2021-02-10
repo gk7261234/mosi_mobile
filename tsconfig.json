@@ -1,0 +1,34 @@
+{
+  // "extends": "./paths.json",
+  "compilerOptions": {
+    "target": "ES2018",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "lib": [
+      "ESNext",
+      "ESNext.AsyncIterable",
+      "DOM"
+    ],
+    "esModuleInterop": true,
+    "allowJs": true,
+    "sourceMap": true,
+    "strict": true,
+    "noEmit": true,
+    "experimentalDecorators": true,
+    "types": [
+      "@nuxt/types",
+      "@types/node"
+    ],
+    "baseUrl": "./",
+    "paths": {
+      "@pages/*": ["pages/*"],
+      "@core/*": ["core/*"],
+      "@components/*": ["components/*"]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    ".nuxt",
+    "dist"
+  ]
+}
