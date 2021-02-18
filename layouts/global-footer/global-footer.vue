@@ -1,6 +1,6 @@
 <template>
   <div class="global-footer">
-    <div class="global-footer--top">
+    <!-- <div class="global-footer--top">
       <div class="global-footer--top--text">
         <div class="text__left">
           <Row type="flex" justify="center">
@@ -43,7 +43,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <copyright></copyright>
   </div>
 </template>
