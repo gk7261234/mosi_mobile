@@ -29,11 +29,19 @@ export default {
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/stylelint
-    '@nuxtjs/stylelint-module',
+    // '@nuxtjs/stylelint-module',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ['@nuxtjs/style-resources'],
+  styleResources: {
+    scss: [
+      'assets/styles/reset.scss',
+      'assets/styles/theme.scss',
+      'assets/styles/modules.scss',
+      'https://cdn.jsdelivr.net/npm.animate.css@3.5.1',
+    ],
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},

@@ -1,0 +1,203 @@
+%large-font {
+  font-family: SourceHanSansCN-Light;
+  position: absolute;
+  left: (362 / $baseWidth * $normalVw);
+}
+$transtion: top 0.5s;
+@font-face {
+  font-family: SourceHanSansCN-Light;
+  src: url("~@/assets/font/SourceHanSansCN-Light.otf");
+}
+@font-face {
+  font-family: SourceHanSansCN;
+  src: url("~@/assets/font/SourceHanSansCN-Normal.otf");
+}
+.mosi-layout {
+  .content__header {
+    height: (560 / $baseHeight * $normalVh);
+    width: 100%;
+    position: relative;
+    video {
+      object-fit:fill;
+      width: 100%;
+      height: 100%;
+    }
+    @media only screen and (min-width: 1920px) {
+      height: 560px;
+    }
+    .content__header--largestfont {
+      @extend %large-font;
+      color: #ffffff;
+      font-size: 1.9vw;
+      font-weight: bold;
+      letter-spacing: (5 / $baseWidth * $normalVw);
+      top: (197 / $baseHeight * $normalVh);
+      @media only screen and (max-width: 768px) {
+        // font-size: $large;
+        top: 140px;
+        transition: $transtion;
+      }
+      @media only screen and (min-width: 1920px) {
+        // font-size: $largest;
+        letter-spacing: 5px;
+        top: 197px;
+        transition: $transtion;
+      }
+    }
+
+    .content__header--largefont {
+      @extend %large-font;
+      color: #999999;
+      font-size: 1vw;
+      font-weight: 300;
+      top: (290 / $baseHeight * $normalVh);
+      line-height: (60 / $baseHeight * $normalVh);
+      @media only screen and (max-width: 768px) {
+        // font-size: $normal;
+        line-height: 30px;
+        top: 190px;
+        transition: $transtion;
+      }
+      @media only screen and (min-width: 1920px) {
+        // font-size: $larger;
+        letter-spacing: 5px;
+        line-height: 60px;
+        top: 290px;
+        transition: $transtion;
+      }
+    }
+    .content__header--largetitle-top {
+      @extend %large-font;
+      font-size: (24 / $baseWidth * $normalVw);
+      top: (319 / $baseHeight * $normalVh);
+      color: $headerColor;
+      font-weight: 400;
+      @media only screen and (min-width: 1920px) {
+        font-size: 24px;
+        top: 319px;
+        transition: $transtion;
+      }
+    }
+    .content__header--largetitle-bottom {
+      top: (368 / $baseHeight * $normalVh);
+      font-size: (18 / $baseWidth * $normalVw);
+      font-weight: 400;
+      line-height: (40 / $baseHeight * $normalVh);
+      @media only screen and (min-width: 1920px) {
+        font-size: 18px;
+        line-height: 40px;
+        letter-spacing: 1px;
+        top: 368px;
+      }
+    }
+  }
+  .content {
+    background-color: #fafafa;
+    padding: 0 (360 / $baseWidth * $normalVw);
+  }
+  .content--title {
+    width: 100%;
+    text-align: center;
+    .content--title-top {
+      color: $titleColor;
+      font-size: $largerSize;
+      font-weight: 400;
+      position: relative;
+      z-index: 2;
+      @media only screen and (max-width: 768px) {
+        font-size: $normal;
+      }
+      &::after {
+        position: relative;
+        top: (-11 / $baseHeight * $normalVh);
+        left: 50%;
+        transform: translateX(-50%);
+        content: " ";
+        display: block;
+        width: (145 / $baseWidth * $normalVw);
+        height: (10 / $baseHeight * $normalVh);
+        background-color: $headerColor;
+        z-index: -1;
+        @media only screen and (max-width: 768px) {
+          width: 80px;
+        }
+      }
+    }
+    .content--title-top--small {
+      &::after {
+        width: (125 / $baseWidth * $normalVw);
+      }
+    }
+    .content--title-bottom {
+      font-size: $largeSize;
+      font-weight: 300;
+      color: $normalColor;
+      letter-spacing: (2 / $baseWidth * $normalVw);
+    }
+  }
+
+  .content__header--anchor {
+    position: absolute;
+    background-color: #292929;
+    height: 60px;
+    line-height: 60px;
+    font-size: 14px;
+    font-weight: 400;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    padding: 0 (588 / $baseWidth * $normalVw);
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  .content__header--anchor-each {
+    color: #ffffff;
+  }
+  .content__header--anchor-each--active {
+    color: $titleHoverColor;
+    &::after {
+      position: relative;
+      top: (-4 / $baseHeight * $normalVh);
+      left: 50%;
+      transform: translateX(-50%);
+      content: " ";
+      display: block;
+      width: (50 / $baseWidth * $normalVw);
+      height: (4 / $baseHeight * $normalVh);
+      background-color: $titleHoverColor;
+    }
+  }
+
+  .left-position {
+    width: 256px;
+    min-width: 210px;
+    height: 530px;
+    padding: 33px 38px;
+    background: #ffffff;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    &:before {
+      position: absolute;
+      background-color: $normalColor;
+      content: "";
+      width: 100%;
+      height: 10px;
+      top: 0;
+      left: 0;
+    }
+    .left-position--title {
+      font-size: 30px;
+      font-weight: 400;
+      color: $titleColor;
+      text-align: center;
+    }
+  }
+  ::v-deep .ivu-btn {
+    &:hover,
+    &:focus,
+    &:active {
+      border: 1px solid $titleHoverColor;
+    }
+  }
+}

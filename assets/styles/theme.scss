@@ -1,0 +1,24 @@
+$normalColor: #666666;
+$headerColor: #cccccc;
+$titleColor: #333333;
+$footerColor: #999999;
+$hoverColor: #ff9c0f;
+$titleHoverColor: #ff931e;
+$fontFamily: "Microsoft YaHei";
+
+$baseWidth: 1920;
+$baseHeight: 1080;
+$normalVw: 100vw;
+$normalVh: 100vh;
+
+$small: 14px;
+$normal: 16px;
+$large: 20px;
+$larger: 30px;
+$largest: 50px;
+
+$smallSize: (14 / $baseWidth * 100vw);
+$normalSize: (16 / $baseWidth * 100vw);
+$largeSize: (20 / $baseWidth * 100vw);
+$largerSize: (30 / $baseWidth * 100vw);
+$largestSize: (50 / $baseWidth * 100vw);

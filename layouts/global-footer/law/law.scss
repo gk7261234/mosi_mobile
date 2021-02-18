@@ -1,0 +1,23 @@
+.global-footer--bottom {
+  width: 100%;
+  height: calc(131 / 1080 * 100vh);
+  background: url("~@/assets/image/common/bottom-line.png")
+    no-repeat center;
+  background-size: 100% 100%;
+  background-color: #121212;
+  .global-footer--bottom--text {
+    font-size: $smallSize;
+    padding-top: calc(94 / 1080 * 100vh);
+    color: white;
+    text-align: center;
+    font-family: Microsoft YaHei;
+  }
+  .text-record {
+    cursor: pointer;
+  }
+  .global-footer--bottom--icon {
+    width: 0.9vw;
+    margin-top: -5px;
+  }
+}
+
