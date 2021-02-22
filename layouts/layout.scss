@@ -39,11 +39,7 @@
       left: 50%;
       transform: translate(-50%,-50%);
       width: 1.1vw;
-      // height: 1.3vw;
     }
-    // color: #fff;
-    // text-align: center;
-    // border-radius: 2px;
   }
   .back-show {
     opacity: 1;
@@ -51,4 +47,9 @@
   .back-hidden {
     opacity: 0;
   }
+}
+
+::v-deep .ivu-layout-header {
+  height: initial;
+  line-height: initial;
 }

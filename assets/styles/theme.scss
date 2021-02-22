@@ -6,8 +6,10 @@ $hoverColor: #ff9c0f;
 $titleHoverColor: #ff931e;
 $fontFamily: "Microsoft YaHei";
 
-$baseWidth: 1920;
-$baseHeight: 1080;
+$bgColor: #000;
+
+$baseWidth: 375;
+$baseHeight: 667;
 $normalVw: 100vw;
 $normalVh: 100vh;
 
@@ -22,3 +24,5 @@ $normalSize: (16 / $baseWidth * 100vw);
 $largeSize: (20 / $baseWidth * 100vw);
 $largerSize: (30 / $baseWidth * 100vw);
 $largestSize: (50 / $baseWidth * 100vw);
+
+

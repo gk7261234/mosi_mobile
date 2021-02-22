@@ -11,16 +11,16 @@ export const homePageTechList = [
   [
     {
       id: 1,
-      imgSrc: require('@/assets/image/homepage/create-idea.png'),
-      activeSrc: require('@/assets/image/homepage/dynamic/icon_0001.png'),
+      // imgSrc: require('@/assets/image/homepage/create-idea.png'),
+      // activeSrc: require('@/assets/image/homepage/dynamic/icon_0001.png'),
       title: '创建思路',
       subscription:
         '魔思科技（MOSI）启思DT时代的发展，智能创建大数据全生命周期应用与服务。帮您调整进入数字时代的高效运营与管理。',
     },
     {
       id: 2,
-      imgSrc: require('@/assets/image/homepage/adjust-think.png'),
-      activeSrc: require('@/assets/image/homepage/dynamic/icon_0002.png'),
+      // imgSrc: require('@/assets/image/homepage/adjust-think.png'),
+      // activeSrc: require('@/assets/image/homepage/dynamic/icon_0002.png'),
       title: '调整思维',
       subscription:
         '可视化模式扫净视角盲区，大数据分析挖掘解析隐形问题。经营过程中，不该让运营控制你，你却不了解运营。',
@@ -29,16 +29,16 @@ export const homePageTechList = [
   [
     {
       id: 3,
-      imgSrc: require('@/assets/image/homepage/think-ahead.png'),
-      activeSrc: require('@/assets/image/homepage/dynamic/icon_0003.png'),
+      // imgSrc: require('@/assets/image/homepage/think-ahead.png'),
+      // activeSrc: require('@/assets/image/homepage/dynamic/icon_0003.png'),
       title: '超前思度',
       subscription:
         '数字孪生，是物理世界与数字世界的桥梁技术。我们与世界尽情交互，更不断在交互中维持平衡。',
     },
     {
       id: 4,
-      imgSrc: require('@/assets/image/homepage/more-than.png'),
-      activeSrc: require('@/assets/image/homepage/dynamic/icon_0004.png'),
+      // imgSrc: require('@/assets/image/homepage/more-than.png'),
+      // activeSrc: require('@/assets/image/homepage/dynamic/icon_0004.png'),
       title: '不止于思',
       subscription: '创新本身就是魔力，如果你在思考“未来”，答案就在我们这里。',
     },
@@ -47,9 +47,9 @@ export const homePageTechList = [
 
 export const applyDirectionList = [
   {
-    defaultImgSrc: require('@/assets/image/homepage/data-acquisition-normal.png'),
-    activeImgSrc: require('@/assets/image/homepage/data-acquisition-active.png'),
-    video: require('@/assets/video/data1.webm'),
+    // defaultImgSrc: require('@/assets/image/homepage/data-acquisition-normal.png'),
+    // activeImgSrc: require('@/assets/image/homepage/data-acquisition-active.png'),
+    // video: require('@/assets/video/data1.webm'),
     title: '数据采集/管理',
     detail: [
       '多种数据采集方式，无碍对接客户系统。',
@@ -57,12 +57,12 @@ export const applyDirectionList = [
       '丰富数据提取接口，高效完整数据汇集。',
     ],
     active: true,
-    detailSrc: require('@/assets/image/homepage/data-acquisition-animate.png'),
+    // detailSrc: require('@/assets/image/homepage/data-acquisition-animate.png'),
   },
   {
-    defaultImgSrc: require('@/assets/image/homepage/data-governance-normal.png'),
-    activeImgSrc: require('@/assets/image/homepage/data-governance-active.png'),
-    video: require('@/assets/video/data2.webm'),
+    // defaultImgSrc: require('@/assets/image/homepage/data-governance-normal.png'),
+    // activeImgSrc: require('@/assets/image/homepage/data-governance-active.png'),
+    // video: require('@/assets/video/data2.webm'),
     title: '数据治理',
     detail: [
       '提高数据质量，挖掘数据隐藏价值。',
@@ -70,12 +70,12 @@ export const applyDirectionList = [
       '建立数据标准，降低开发利用难度。',
     ],
     active: false,
-    detailSrc: require('@/assets/image/homepage/data-governance-animate.png'),
+    // detailSrc: require('@/assets/image/homepage/data-governance-animate.png'),
   },
   {
-    defaultImgSrc: require('@/assets/image/homepage/data-storage-normal.png'),
-    activeImgSrc: require('@/assets/image/homepage/data-storage-active.png'),
-    video: require('@/assets/video/data3.webm'),
+    // defaultImgSrc: require('@/assets/image/homepage/data-storage-normal.png'),
+    // activeImgSrc: require('@/assets/image/homepage/data-storage-active.png'),
+    // video: require('@/assets/video/data3.webm'),
     title: '数据存储',
     detail: [
       '海量数据检索，支撑企业决策制定。',
@@ -83,12 +83,12 @@ export const applyDirectionList = [
       '防止数据泄露，维护用户数据安全。',
     ],
     active: false,
-    detailSrc: require('@/assets/image/homepage/data-storage-animate.png'),
+    // detailSrc: require('@/assets/image/homepage/data-storage-animate.png'),
   },
   {
-    defaultImgSrc: require('@/assets/image/homepage/data-twin-normal.png'),
-    activeImgSrc: require('@/assets/image/homepage/data-twin-active.png'),
-    video: require('@/assets/video/data4.webm'),
+    // defaultImgSrc: require('@/assets/image/homepage/data-twin-normal.png'),
+    // activeImgSrc: require('@/assets/image/homepage/data-twin-active.png'),
+    // video: require('@/assets/video/data4.webm'),
     title: '数据应用/数字孪生',
     detail: [
       '深耕大数据各环节，覆盖各行应用场景。',
@@ -96,69 +96,69 @@ export const applyDirectionList = [
       '掌握未来管理模式，驱动运营业务发展。',
     ],
     active: false,
-    detailSrc: require('@/assets/image/homepage/data-twin-animate.png'),
+    // detailSrc: require('@/assets/image/homepage/data-twin-animate.png'),
   },
 ]
 
 export const partnersList = [
   {
-    activeImgSrc: require('@/assets/image/common/sqjt-active.png'),
-    defaultImgSrc: require('@/assets/image/homepage/sqjt.png'),
+    // activeImgSrc: require('@/assets/image/common/sqjt-active.png'),
+    // defaultImgSrc: require('@/assets/image/homepage/sqjt.png'),
     active: false,
   },
   {
-    activeImgSrc: require('@/assets/image/common/hw-active.png'),
-    defaultImgSrc: require('@/assets/image/homepage/hw.png'),
+    // activeImgSrc: require('@/assets/image/common/hw-active.png'),
+    // defaultImgSrc: require('@/assets/image/homepage/hw.png'),
     active: false,
   },
   {
-    activeImgSrc: require('@/assets/image/common/dqtl-active.png'),
-    defaultImgSrc: require('@/assets/image/homepage/dqtl.png'),
+    // activeImgSrc: require('@/assets/image/common/dqtl-active.png'),
+    // defaultImgSrc: require('@/assets/image/homepage/dqtl.png'),
     active: false,
   },
   {
-    activeImgSrc: require('@/assets/image/common/zgdx-active.png'),
-    defaultImgSrc: require('@/assets/image/homepage/zgdx.png'),
+    // activeImgSrc: require('@/assets/image/common/zgdx-active.png'),
+    // defaultImgSrc: require('@/assets/image/homepage/zgdx.png'),
     active: false,
   },
   {
-    activeImgSrc: require('@/assets/image/common/zglt-active.png'),
-    defaultImgSrc: require('@/assets/image/homepage/zglt.png'),
+    // activeImgSrc: require('@/assets/image/common/zglt-active.png'),
+    // defaultImgSrc: require('@/assets/image/homepage/zglt.png'),
     active: false,
   },
   {
-    activeImgSrc: require('@/assets/image/common/hebyh-active.png'),
-    defaultImgSrc: require('@/assets/image/homepage/hebyh.png'),
+    // activeImgSrc: require('@/assets/image/common/hebyh-active.png'),
+    // defaultImgSrc: require('@/assets/image/homepage/hebyh.png'),
     active: false,
   },
   {
-    activeImgSrc: require('@/assets/image/common/sdjc-active.png'),
-    defaultImgSrc: require('@/assets/image/homepage/sdjc.png'),
+    // activeImgSrc: require('@/assets/image/common/sdjc-active.png'),
+    // defaultImgSrc: require('@/assets/image/homepage/sdjc.png'),
     active: false,
   },
   {
-    activeImgSrc: require('@/assets/image/common/gaj-active.png'),
-    defaultImgSrc: require('@/assets/image/homepage/gaj.png'),
+    // activeImgSrc: require('@/assets/image/common/gaj-active.png'),
+    // defaultImgSrc: require('@/assets/image/homepage/gaj.png'),
     active: false,
   },
   {
-    activeImgSrc: require('@/assets/image/common/wxyg-active.png'),
-    defaultImgSrc: require('@/assets/image/homepage/wxyg.png'),
+    // activeImgSrc: require('@/assets/image/common/wxyg-active.png'),
+    // defaultImgSrc: require('@/assets/image/homepage/wxyg.png'),
     active: false,
   },
   {
-    activeImgSrc: require('@/assets/image/common/zgyl-active.png'),
-    defaultImgSrc: require('@/assets/image/homepage/zgyl.png'),
+    // activeImgSrc: require('@/assets/image/common/zgyl-active.png'),
+    // defaultImgSrc: require('@/assets/image/homepage/zgyl.png'),
     active: false,
   },
   {
-    activeImgSrc: require('@/assets/image/common/zgyz-active.png'),
-    defaultImgSrc: require('@/assets/image/homepage/zgyz.png'),
+    // activeImgSrc: require('@/assets/image/common/zgyz-active.png'),
+    // defaultImgSrc: require('@/assets/image/homepage/zgyz.png'),
     active: false,
   },
   {
-    activeImgSrc: require('@/assets/image/common/wumq-active.png'),
-    defaultImgSrc: require('@/assets/image/homepage/wumq.png'),
+    // activeImgSrc: require('@/assets/image/common/wumq-active.png'),
+    // defaultImgSrc: require('@/assets/image/homepage/wumq.png'),
     active: false,
   },
 ]
@@ -263,27 +263,27 @@ export const developCtrlBtn = [
   {
     key: Edirection.left,
     status: EStatus.disabled,
-    normal: require('@/assets/image/common/left-arrow-normal.png'),
-    active: require('@/assets/image/common/left-arrow-active.png'),
-    disabled: require('@/assets/image/common/left-arrow-no.png'),
+    // normal: require('@/assets/image/common/left-arrow-normal.png'),
+    // active: require('@/assets/image/common/left-arrow-active.png'),
+    // disabled: require('@/assets/image/common/left-arrow-no.png'),
   },
   {
     key: Edirection.right,
     status: EStatus.normal,
-    normal: require('@/assets/image/common/right-arrow-normal.png'),
-    active: require('@/assets/image/common/right-arrow-hover.png'),
-    disabled: require('@/assets/image/common/right-arrow-no.png'),
+    // normal: require('@/assets/image/common/right-arrow-normal.png'),
+    // active: require('@/assets/image/common/right-arrow-hover.png'),
+    // disabled: require('@/assets/image/common/right-arrow-no.png'),
   },
 ]
 
 export const BannerList = [
   {
-    fullImg: require('@/assets/image/homepage/banner1.jpg'),
+    fullImg: require('@/assets/images/homepage/banner1.png'),
   },
   {
-    fullImg: require('@/assets/image/homepage/banner2_1.png'),
+    fullImg: require('@/assets/images/homepage/banner1.png'),
   },
   {
-    fullImg: require('@/assets/image/homepage/banner3.png'),
+    fullImg: require('@/assets/images/homepage/banner1.png'),
   },
 ]

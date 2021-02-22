@@ -1,0 +1,15 @@
+.global-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5.997001vh;
+  margin: auto 5.333333vw;
+  .logo {
+    width: 31.466667vw;
+    height: 3.448276vh;
+  }
+  .menu {
+    width: 5.333333vw;
+    height: 2.448276vh;
+  }
+}

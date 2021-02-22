@@ -1,0 +1,73 @@
+@import '~@/assets/styles/common/itemLayout.scss';
+.flex-box__content {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 4.647676vh;
+  .flex-box__content-item {
+    position: relative;
+    width: 43.466667vw;
+    height: 5.997001vh;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #EEEEEE;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.03);
+    border-radius: 1px;
+    margin-bottom: 1.49925vh;
+    .logo {
+      position: absolute;
+      width: 28vw;
+      height: 3.748126vh;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .logo-sqjt {
+      background: url("~@/assets/images/homePage/logo-sqjt.png") no-repeat center;
+      background-size: contain;
+    }
+    .logo-dqtl {
+      background: url("~@/assets/images/homePage/logo-dqtl.png") no-repeat center;
+      background-size: contain;
+    }
+    .logo-zglt {
+      background: url("~@/assets/images/homePage/logo-zglt.png") no-repeat center;
+      background-size: contain;
+    }
+    .logo-sdjc {
+      background: url("~@/assets/images/homePage/logo-sdjc.png") no-repeat center;
+      background-size: contain;
+    }
+    .logo-wxyg {
+      background: url("~@/assets/images/homePage/logo-wxyg.png") no-repeat center;
+      background-size: contain;
+    }
+    .logo-zgyz {
+      background: url("~@/assets/images/homePage/logo-zgyz.png") no-repeat center;
+      background-size: contain;
+    }
+
+    .logo-wumq {
+      background: url("~@/assets/images/homePage/logo-wumq.png") no-repeat center;
+      background-size: contain;
+    }
+    .logo-zgyl {
+      background: url("~@/assets/images/homePage/logo-zgyl.png") no-repeat center;
+      background-size: contain;
+    }
+    .logo-gaj {
+      background: url("~@/assets/images/homePage/logo-gaj.png") no-repeat center;
+      background-size: contain;
+    }
+    .logo-hebyh {
+      background: url("~@/assets/images/homePage/logo-hebyh.png") no-repeat center;
+      background-size: contain;
+    }
+    .logo-zgdx {
+      background: url("~@/assets/images/homePage/logo-zgdx.png") no-repeat center;
+      background-size: contain;
+    }
+    .logo-hw {
+      background: url("~@/assets/images/homePage/logo-hw.png") no-repeat center;
+      background-size: contain;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.menu-level1 {
+  color: #eee;
+}
+.menu-level2 {
+  color: #999;
+}
+.menu-level3 {
+  color: #666;
+}
+.menu-level4 {
+  color: #333;
+}
+.big-data::before {
+  content: " ";
+  position: absolute;
+  left: 24px;
+  top: 17px;
+  width: 13px;
+  height: 17px;
+  background: url('~@/assets/images/layout/pltform-icon.png') no-repeat center;
+  background-size: contain;
+}
+.view-tool::before {
+  content: " ";
+  position: absolute;
+  left: 24px;
+  top: 17px;
+  width: 13px;
+  height: 17px;
+  background: url('~@/assets/images/layout/tool-icon.png') no-repeat center;
+  background-size: contain;
+}

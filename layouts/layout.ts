@@ -1,6 +1,6 @@
 import { Component, Vue } from 'vue-property-decorator'
-import GlobalHeader from './global-header/global-header.vue'
-import GlobalFooter from './global-footer/global-footer.vue'
+import GlobalHeader from '@components/layout/global-header/global-header.vue'
+import GlobalFooter from '@components/layout/global-footer/global-footer.vue'
 
 @Component({
   components: {

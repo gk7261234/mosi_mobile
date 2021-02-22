@@ -1,0 +1,29 @@
+@import '~@/assets/styles/common/itemLayout.scss';
+.flex-box__content {
+  .flex-box__content-item {
+    width: 100%;
+    height: 26.986507vh;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid #eeeeee;
+    border-radius: 2px;
+    margin-top: 2.998501vh;
+    padding: 1.049475vh 5.333333vw;
+    img {
+      height: 8.245877vh;
+      width: 14.666667vw;
+    }
+    .flex-box__content-item__title {
+      font-size: 4.266667vw;
+      font-weight: 400;
+      color: #333333;
+    }
+    .flex-box__content-item__content {
+      padding-top: 2.248876vh;
+      text-align: left;
+      font-size: 3.2vw;
+      font-weight: 300;
+      color: #888888;
+      line-height: 3.598201vh;
+    }
+  }
+}

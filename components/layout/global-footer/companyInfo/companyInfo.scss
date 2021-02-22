@@ -1,0 +1,30 @@
+.company-info {
+  display: flex;
+  justify-content: space-around;
+  padding: 5.097451vh 4.333333vw 3.448276vh 4.333333vw;
+  background-color: #121212;
+  border-bottom: 1px dashed #999;
+  font-size: 2.666667vw;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #999B9D;
+  .info {
+    .title {
+      color: #ffffff;
+      line-height: 4.497751vh;
+    }
+    .info-list {
+      line-height: 2.6vh;
+    }
+  }
+  .wx {
+    .title {
+      color: #ffffff;
+      line-height: 4.497751vh;
+    }
+    img {
+      height: 9.745127vh;
+      width: 17.333333vw;
+    }
+  }
+}
