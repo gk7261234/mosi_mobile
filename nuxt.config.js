@@ -64,4 +64,8 @@ export default {
     '@core': resolve(__dirname, './core'),
     '@utils': resolve(__dirname, './utils'),
   },
+  // server: {
+  //   port: 8181,
+  //   host: '0.0.0.0',
+  // },
 }
