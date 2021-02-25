@@ -1,12 +1,6 @@
 <template>
   <!-- :open-names="['产品体系']" -->
-  <Menu
-    :mode="Menu.MenuExtra.mode"
-    :accordion="Menu.MenuExtra.accordion"
-    :menu="Menu"
-    :active-name="ActiveName"
-    class="menu-component"
-  >
+  <i-menu mode="horizontal" :active-name="ActiveName" class="menu-component">
     <!-- 产品体系 -->
     <Submenu
       name="产品体系"
@@ -53,25 +47,17 @@
           >
         </MenuGroup>
       </div>
-      <!-- <div class="solute-case--wrap">
-        <div v-for="(item,index) in SlouteSubMenu" :key="index" class="case--single" @mouseover="hoverCase(index)" @mouseleave="leaveCase(index)" @click="toPage(item.path)">
-          <div>
-            <img :src="item.active ? item.activeImg : item.defaultImg" alt="">
-          </div>
-          <div class="case--single--title">{{item.name}}</div>
-        </div>
-      </div> -->
     </Submenu>
 
     <!-- 成功案例 关于我们 加入我们 -->
     <MenuItem
-      v-for="item in Menu.MenuItemList"
+      v-for="item in MenuInfo.MenuItemList"
       :key="item.name"
       :name="item.name"
       :to="item.path"
       >{{ item.name }}
     </MenuItem>
-  </Menu>
+  </i-menu>
 </template>
 
 <script lang="ts" src="./menu-tab.ts"></script>

@@ -21,13 +21,6 @@ export default class GlobalHeader extends Vue {
     if (_route.name) {
       this.ActiveName = _route.name
     }
-
-    if (_route && _route.meta.title) {
-      // MenuModule.SetActive(_route.meta.title);
-    }
-    if (_route && _route.name) {
-      // MainManager.Instance().MenuService.SetCurrentMenuId(_route.name);
-    }
   }
 
   private created() {

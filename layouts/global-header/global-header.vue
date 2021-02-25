@@ -1,11 +1,11 @@
 <template>
   <div class="global-header">
     <div class="global-header__content">
-      <img class="logo" src="~@/assets/images/logo.png" />
+      <img class="logo" src="~@/assets/image/logo.png" />
       <transition name="slide-fade">
         <menu-tab
           class="menu global-header--menu menu-horizontal"
-          :menu="Menu"
+          :menu-info="Menu"
           :active-name="ActiveName"
         ></menu-tab>
       </transition>

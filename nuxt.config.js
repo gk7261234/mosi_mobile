@@ -1,9 +1,10 @@
+/* eslint-disable nuxt/no-cjs-in-config */
 import { resolve } from 'path'
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'ssr_ts_template',
+    title: '魔思科技',
     htmlAttrs: {
       lang: 'en',
     },
@@ -19,7 +20,10 @@ export default {
   css: ['iview/dist/styles/iview.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['@/plugins/iview'],
+  plugins: [
+    { src: '@/plugins/iview', ssr: true },
+    { src: '@/plugins/vue-awesome-swiper', mode: 'client' },
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -44,10 +48,20 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    analyze: false,
+    babel: {
+      babelrc: true,
+    },
+    assetFilter(assetFilename) {
+      return assetFilename.endsWith('.js')
+    },
+    transpile: [/^iview/],
+  },
   alias: {
     '@pages': resolve(__dirname, './pages'),
     '@components': resolve(__dirname, './components'),
     '@core': resolve(__dirname, './core'),
+    '@utils': resolve(__dirname, './utils'),
   },
 }

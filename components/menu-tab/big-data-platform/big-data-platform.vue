@@ -1,7 +1,7 @@
 <template>
   <div class="menu-system--wrap">
     <!-- 大数据平台 -->
-    <!-- <div class="menu--big-data-platform">
+    <div class="menu--big-data-platform">
       <div class="big-data-platform__title">
         <img src="~@/assets/image/productSystem/pltform-icon.png" alt="" />
         <span>大数据平台</span>
@@ -41,9 +41,9 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
     <!-- 可视化工具 是否要做循环-->
-    <!-- <div class="menu--visualization-tools">
+    <div class="menu--visualization-tools">
       <div class="visualization-tools__title">
         <img src="~@/assets/image/productSystem/tool-icon.png" alt="" />
         <span>可视化工具</span>
@@ -65,7 +65,7 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
   </div>
 </template>
 

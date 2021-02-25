@@ -12,9 +12,9 @@ export default class LayoutComponent extends Vue {
   private headerClass = ''
   private distance: number = 0
 
-  private created() {
-    // this指向注意
-    // window.addEventListener('scroll',this.handleScroll,true);
+  private mounted() {
+    const vm = this
+    window.addEventListener('scroll', vm.handleScroll, true)
   }
 
   get isBack() {
@@ -22,24 +22,21 @@ export default class LayoutComponent extends Vue {
   }
 
   // #region
-  handleScroll(e: any) {
-    // console.log(e.target.scrollTop);
-    this.distance = e.target.scrollTop
-    // this.distance = document.body.scrollTop || document.documentElement.scrollTop || window.pageYOffset;
-    // console.log(this.distance, 'juli');
+  handleScroll() {
+    this.distance =
+      document.body.scrollTop ||
+      document.documentElement.scrollTop ||
+      window.pageYOffset
   }
 
   backTop() {
     const ele: any = document.querySelector('.mosi-layout')
-    // ele && ele.scrollTo(0, 0);
     let distance = ele.scrollTop
 
     let timer: any = null
     clearInterval(timer)
     timer = setInterval(function () {
       distance -= Math.ceil(distance / 8)
-      // console.log(distance, 'distance');
-      // 做减速运动
       ele.scrollTo(0, distance)
       if (distance === 0) {
         clearInterval(timer)
@@ -47,8 +44,8 @@ export default class LayoutComponent extends Vue {
     }, 10)
   }
 
-  // destroyed () {
-  //   window.removeEventListener('scroll',this.handleScroll,true);
-  // }
-  // #endregion
+  destroyed() {
+    const vm = this
+    window.removeEventListener('scroll', vm.handleScroll, true)
+  }
 }

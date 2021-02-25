@@ -15,9 +15,11 @@
   "husky": {},
   "dependencies": {
     "@nuxt/typescript-runtime": "^2.0.1",
-    "core-js": "^3.8.3",
+    "core-js": "^2.6.5",
     "iview": "^3.5.4",
     "nuxt": "^2.14.12",
+    "swiper": "^5.2.0",
+    "vue-awesome-swiper": "^4.1.1",
     "vue-class-component": "^7.2.6",
     "vue-property-decorator": "^9.1.2"
   },
@@ -34,6 +36,7 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.6.3",
+    "babel-plugin-import": "^1.13.3",
     "eslint": "^7.18.0",
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-nuxt": "^2.0.0",

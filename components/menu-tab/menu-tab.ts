@@ -11,7 +11,7 @@ import SystemSubmenu from './big-data-platform/big-data-platform.vue'
 export default class MenuTab extends Vue {
   private SlouteSubMenu = SlouteSubMenu
   @Prop()
-  private Menu!: MenuDto.MenuModal
+  private MenuInfo!: MenuDto.MenuModal
 
   @Prop()
   private ActiveName!: string

@@ -4,7 +4,7 @@
       <div class="global-footer--top--text">
         <div class="text__left">
           <Row type="flex" justify="center">
-            <i-col span="6" order="1">
+            <Col span="6" order="1">
               <div class="text__left--product">
                 <div class="text__left--title">
                   {{ ProductSystemList.title }}
@@ -13,8 +13,8 @@
                   {{ item.name }}
                 </div>
               </div>
-            </i-col>
-            <i-col span="6" order="2">
+            </Col>
+            <Col span="6" order="2">
               <div class="text__left--case">
                 <div class="text__left--title">{{ SuccessCaseList.title }}</div>
                 <div class="text__left--case--wrap">
@@ -25,15 +25,15 @@
                   </div>
                 </div>
               </div>
-            </i-col>
-            <i-col span="12" order="3">
+            </Col>
+            <Col span="12" order="3">
               <div class="text__left--contact">
                 <div class="text__left--title">{{ contactUsList.title }}</div>
                 <div v-for="item in contactUsList.list" :key="item">
                   {{ item }}
                 </div>
               </div>
-            </i-col>
+            </Col>
           </Row>
         </div>
         <div class="text__right">

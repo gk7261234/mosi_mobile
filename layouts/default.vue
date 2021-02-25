@@ -1,6 +1,11 @@
 <template>
-  <Layout class="mosi-layout">
-    <Header class="mosi-layout__header header-top">
+  <Layout class="mosi-layout" @scroll.native="handleScroll($event)">
+    <Header
+      :class="[
+        'mosi-layout__header',
+        distance > 0 ? 'header-other' : 'header-top',
+      ]"
+    >
       <global-header></global-header>
     </Header>
     <Content class="mosi-layout__content">
@@ -16,24 +21,6 @@
 <script lang="ts" src="./layout.ts"></script>
 <style lang="scss" src="./layout.scss" scoped></style>
 <style lang="scss">
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-}
 .mosi-layout {
   position: relative;
   height: 100%;
