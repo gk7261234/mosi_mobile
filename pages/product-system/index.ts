@@ -9,6 +9,7 @@ import {
   name: 'ProductSystem',
 })
 export default class ProductSystem extends Vue {
+  // private poster = require('@/assets/image/productSystem/product-banner.png')
   private dataPlatfromArr: IMessage[] = systemBigDataPlatform
   private visualizationTools: IToolsDesc[] = tools
   private tabPlatform: string = systemBigDataPlatform[0].title

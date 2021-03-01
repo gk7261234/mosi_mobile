@@ -1,6 +1,6 @@
 /* eslint-disable nuxt/no-cjs-in-config */
 import { resolve } from 'path'
-
+const TerserPlugin = require('terser-webpack-plugin')
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -49,7 +49,46 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    analyze: false,
+    analyze: true,
+    hardSource: true,
+    extractCSS: true,
+    optimization: {
+      splitChunks: {
+        minSize: 10000,
+        maxSize: 250000,
+      },
+      minimizer: [
+        new TerserPlugin({
+          terserOptions: {
+            // 开启缓存
+            cache: true,
+            // 开启多进程打包
+            parallel: true,
+            // 启动source-map
+            sourceMap: true,
+            warnings: false,
+            output: {
+              comments: false,
+            },
+            compress: {
+              // 删除无用的代码
+              unused: true,
+              // 删除debugger
+              drop_debugger: true,
+              // 移除console
+              drop_console: true,
+              // 移除无用的代码
+              dead_code: true,
+              pure_funcs: ['console.log'],
+            },
+          },
+        }),
+      ],
+    },
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    extend(config, { isClient, loaders: { vue } }) {
+      vue.transformAssetUrls.video = ['src', 'poster']
+    },
     babel: {
       babelrc: true,
     },

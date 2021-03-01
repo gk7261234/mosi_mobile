@@ -6,7 +6,7 @@
         autoplay
         loop
         muted
-        poster="~@/assets/image/productSystem/product-banner.jpg"
+        poster="~@/assets/image/productSystem/product-banner.png"
       >
         <source
           src="~@/assets/image/productSystem/product-banner.webm"
