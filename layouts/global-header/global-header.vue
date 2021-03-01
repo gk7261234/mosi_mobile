@@ -1,7 +1,7 @@
 <template>
   <div class="global-header">
     <div class="global-header__content">
-      <img class="logo" src="~@/assets/image/logo.png" />
+      <img class="logo" src="~@/assets/image/logo.png" @click="jumpToHome" />
       <transition name="slide-fade">
         <menu-tab
           class="menu global-header--menu menu-horizontal"

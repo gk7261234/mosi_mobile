@@ -16,6 +16,14 @@
     <Footer class="mosi-layout__footer">
       <global-footer></global-footer>
     </Footer>
+    <!-- 返回顶部 start -->
+    <div
+      :class="[isBack ? 'back-show' : 'back-hidden', 'mosi-layout__back']"
+      @click="backTop"
+    >
+      <img src="~@/assets/image/common/return-top-small.png" alt="" />
+    </div>
+    <!-- 返回顶部 end -->
   </Layout>
 </template>
 <script lang="ts" src="./layout.ts"></script>

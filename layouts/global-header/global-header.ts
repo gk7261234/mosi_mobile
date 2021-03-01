@@ -28,9 +28,9 @@ export default class GlobalHeader extends Vue {
   }
 
   jumpToHome() {
-    if (this.$route.name !== 'homepage') {
+    if (this.$route.name !== '/') {
       this.$router.push({
-        path: '/homepage',
+        path: '/',
       })
     }
   }
