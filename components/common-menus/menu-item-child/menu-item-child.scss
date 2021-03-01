@@ -1,0 +1,9 @@
+.menu-item-child {
+    .menu-overflow {
+        display: block;
+        width: 140px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}

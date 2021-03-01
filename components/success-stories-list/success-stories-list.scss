@@ -1,0 +1,42 @@
+.success-stories-list {
+  display: flex;
+  padding-top: (120 / $baseHeight * $normalVh);
+  .left-position {
+    height: 720px;
+  }
+  .success-stories-list__content--left {
+    height: 90%;
+    overflow: auto;
+    margin-top: 15px;
+  }
+  .ssl--left-each--img {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .success-stories-list__content--left-each {
+    position: relative;
+    width: 180px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 16px;
+    padding-left: 23px;
+    font-size: 14px;
+    margin: 15px 0;
+    cursor: pointer;
+  }
+  .success-stories-list__content--left-each[active="true"] {
+    color: #ffffff;
+    background-color: $titleHoverColor;
+    .ssl--left-each--img {
+      content: url("~@/assets/image/common/leftNav-arrow-active.png");
+    }
+  }
+
+  .success-stories-list__content--right-content {
+    width: calc(100% - 256px);
+    padding-left: (66 / $baseWidth * $normalVw);
+  }
+}

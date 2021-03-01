@@ -1,0 +1,146 @@
+$bottom: (84 / $baseHeight * $normalVh);
+.data-acquisition {
+  .tabs {
+    position: relative;
+    height: 60px;
+  }
+  .data-acquisition__header {
+    position: relative;
+    background: url("~@/assets/image/productSystem/dataAcquisition/product-detail-banner.png") no-repeat 0 0 /100% 100% content-box;
+  }
+  .data-acquisition__content {
+    .data-acquisition-architrcture-img {
+      width: 100%;
+    }
+    #architecture,
+    #function,
+    #advantages,
+    #scene {
+      padding: (133 / $baseHeight * $normalVh) 0 $bottom 0;
+    }
+    .data-acquisition__content--function {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      ::v-deep .ivu-card-body {
+        padding: 0;
+      }
+      .data-acquisition__content--function-card {
+        width: (340 / $baseWidth * $normalVw);
+        height: (360 / $baseHeight * $normalVh);
+        padding: (46 / $baseHeight * $normalVh) (39 / $baseWidth * $normalVw);
+        text-align: center;
+        &:hover {
+          box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.06);
+        }
+      }
+      .function-card--img {
+        width: (85 / $baseWidth * $normalVw);
+      }
+      .function-card--title {
+        font-size: $largeSize;
+        font-weight: bold;
+        color: $titleColor;
+        line-height: (54 / $baseHeight * $normalVh);
+      }
+      .function-card--desc {
+        text-align: left;
+        font-size: 14px;
+        font-weight: 400;
+        color: $footerColor;
+        line-height: (30 / $baseHeight * $normalVh);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+      }
+    }
+    .data-acquisition__content--advantages-card {
+      height: 134px;
+      margin-bottom: (35 / $baseHeight * $normalVh);
+      img {
+        height: 100%;
+        vertical-align: middle;
+      }
+      ::v-deep .ivu-card-body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+
+        .advantages-card__right {
+          margin-left: (33 / $baseWidth * $normalVw);
+        }
+        .advantages-card__right--title {
+          font-size: 16px;
+          font-weight: 400;
+          color: $titleColor;
+          line-height: 40px;
+        }
+        .advantages-card__right--desc {
+          font-size: 14px;
+          font-weight: 400;
+          color: $footerColor;
+          line-height: 30px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          display: -webkit-box;
+        }
+      }
+    }
+    .data-acquisition__content--scene-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: (170 / $baseHeight * $normalVh);
+
+      ::v-deep .ivu-card-body {
+        // height: (210 / $baseHeight * $normalVh);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 (46 / $baseWidth * $normalVw);
+      }
+    }
+    .scene-card-each {
+      width: 49%;
+      &:hover,
+      &:active,
+      &:focus {
+        background: url("~@/assets/image/productSystem/dataAcquisition/scene-bg-active.png") no-repeat 0 0 / 100% 100%
+          content-box;
+      }
+    }
+    .scene-card-each--img {
+      width: (218 / $baseWidth * $normalVw);
+    }
+    .scene-card-each--button {
+      display: block;
+      width: (190 / $baseWidth * $normalVw);
+      height: 32px;
+      background: #ff931e;
+      border-radius: 16px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: #ffffff;
+      position: relative;
+      text-align: left;
+      padding-left: (20 / $baseWidth * $normalVw);
+      border-color: transparent;
+    }
+    .scene-card-each--button--span {
+      vertical-align: middle;
+    }
+    .scene-card-each--button--img {
+      float: right;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: (15 / $baseWidth * $normalVw);
+    }
+  }
+}

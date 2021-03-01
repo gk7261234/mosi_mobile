@@ -1,0 +1,83 @@
+.digital-one-stop-service {
+    width: 45.8vw;
+    text-align: center;
+    .product-architecture__content {
+        ::v-deep .ivu-card-body {
+            padding: 0;
+        }
+        display: flex;
+        justify-content: space-between;
+        padding: 4.8vh 1.1vw 7.3vh;
+        .content--single {
+            padding: 3.7vh 0 2.8vh;
+            width: 12.2vw;
+            font-size: $smallSize;
+            color: $normalColor;
+            line-height: 2.7vh;
+            img {
+                width: 2.5vw;
+                margin-bottom: 2.6vh;
+            }
+        }
+    }
+    .solution-overview__content {
+        img {
+            width: 45.8vw;
+        }
+        .solution-overview__content--text {
+            text-align: left;
+            margin: 4.3vh 0 3.5vh;
+            font-size: $smallSize;
+            color: $normalColor;
+            line-height: 2.7vh;
+            text-indent: 2em;
+            .text-first {
+                font-size: $largeSize;
+            }
+        }
+    }
+    .service--application-value {
+        text-align: left;
+        margin-top: 9.4vh;
+        .service--application-value__content {
+            margin-top: 5.9vh;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .full-row {
+                width: 100%;
+            }
+            .half-row {
+                width: 21.8vw;
+            }
+            .service--application-value__content--single {
+                margin-bottom: 3.7vh;
+                .single-wrap {
+                    padding: 2.6vh 0 2.8vh 1.5vw;
+                    display: flex;
+                    // justify-content: space-between;
+                    .single--img {
+                        display: inline-block;
+                        width: 3.1vw;
+                    }
+                    .single__right {
+                        margin-left: 1vw;
+                        .single__right--title {
+                            font-size: $normalSize;
+                            color: $normalColor;
+                        }
+                        .single__right--text {
+                            padding-top: 1.7vh;
+                            font-size: $smallSize;
+                            color: $footerColor;
+                        }
+                    }
+                }
+
+            }
+        }
+        ::v-deep .ivu-card-body {
+            padding: 0;
+        }
+    }
+}

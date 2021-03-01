@@ -1,0 +1,259 @@
+.about-us {
+  .banner-body {
+    width: 100%;
+    position: relative;
+    background: url("~@/assets/image/aboutUs/our-banner-new.png") no-repeat 0 0/100% 100% content-box;
+    text-align: center;
+    vertical-align: middle;
+    .slogan {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 51.851vh;
+      font-family: Source Han Sans CN;
+      .title {
+        font-size: 2.604167vw;
+        font-weight: bold;
+        color: #FFFFFF;
+      }
+      .sub-title {
+        font-size: 1.5625vw;
+        font-weight: 300;
+        color: #CCCCCC;
+        line-height: 5.555556vh;
+      }
+    }
+  }
+  .tabs {
+    position: relative;
+    height: 60px;
+  }
+  .navigation {
+    display: flex;
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 5.555556vh;
+    line-height: 5.555556vh;
+    width: 100%;
+    background-color: #292929;
+    justify-content: space-between;
+    font-size: 0.729167vw;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #FFFFFF;
+    z-index: 10;
+    padding: 0 30.625vw;
+    div:hover, .active{
+      color: #FF9C0F;
+      border-bottom: 2px solid #FF9C0F;
+      a:hover{
+        color: #FF9C0F;
+      }
+    }
+  }
+  .section {
+    padding: 9vh 0 11vh;
+    text-align: center;
+    .header {
+      .black {
+        color: #333333;
+      }
+      
+      .title {
+        font-size: 1.5625vw;
+        font-weight: 400;
+        position: relative;
+        z-index: 2;
+        &::after {
+          position: relative;
+          top: -1.01852vh;
+          left: 50%;
+          transform: translateX(-50%);
+          content: " ";
+          display: block;
+          width: 6.51042vw;
+          height: 0.92593vh;
+          background-color: #cccccc;
+          z-index: -1;
+        }
+      }
+      .white {
+        color: #FFFFFF;
+        &::after {
+          background-color: #666666;
+        }
+      }
+      .sub-title {
+        font-size: 1.04167vw;
+        font-weight: 300;
+        color: #666666;
+        letter-spacing: 0.10417vw;
+      }
+    }
+    .content {
+      font-size: 0.729167vw;
+      font-family: Microsoft YaHei;
+      font-weight: 400;
+      color: #666666;
+      line-height: 2.777778vh;
+      text-align: left;
+      margin-top: 6.574074vh;
+      .content-text-end {
+        text-indent: 2em;
+      }
+      .content-text-img {
+        display: flex;
+        margin-bottom: 3.796296vh;
+        .text {
+          flex: 1325;
+          span {
+            display: inline-block;
+            text-indent: 2em;
+          }
+          span:first-child {
+            margin-bottom: 3.796296vh;
+          }
+          .text-first:first-letter {
+            font-size: 1.25vw;
+          }
+        }
+        .img {
+          flex: 1000;
+          width: 25.78125vw;
+          height: 24.537037vh;
+          margin-left: 2.447917vw;
+          background: url("~@/assets/image/aboutUs/company-image.png") no-repeat 0 0/100% 100% content-box;
+        }
+      }
+    }
+    .news-list {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 18.75vw;
+      margin-top: 6.018519vh;
+      .news-item {
+        flex: 1;
+        margin-right: 2.239583vw;
+        cursor: pointer;
+        &:hover .title, &:hover .other .time {
+          color: #FF931E;
+        }
+        &:hover .other .arrorw {
+          height: 2.222222vh;
+          width: 4.166667vw;
+          background: url("~@/assets/image/aboutUs/news-view-active.png") no-repeat 0 0/100% 100% content-box;
+        }
+        .img1 {
+          height: 16.666667vh;
+          width: 13.958333vw;
+          background: url("~@/assets/image/aboutUs/news1.png") no-repeat 0 0/100% 100% content-box;
+        }
+        .img2 {
+          height: 16.666667vh;
+          width: 13.958333vw;
+          background: url("~@/assets/image/aboutUs/news2.png") no-repeat 0 0/100% 100% content-box;
+        }
+        .img3 {
+          height: 16.666667vh;
+          width: 13.958333vw;
+          background: url("~@/assets/image/aboutUs/news3.png") no-repeat 0 0/100% 100% content-box;
+        }
+        .img4 {
+          height: 16.666667vh;
+          width: 13.958333vw;
+          background: url("~@/assets/image/aboutUs/news4.png") no-repeat 0 0/100% 100% content-box;
+        }
+        .title {
+          margin: 2.12963vh 0;
+          font-size: 0.729167vw;
+          font-family: Microsoft YaHei;
+          font-weight: 400;
+          color: #FFFFFF;
+          line-height: 2.222222vh;
+        }
+        .other {
+          display: flex;
+          justify-content: space-between;
+          .time {
+            flex: 1;
+            text-align: left;
+            font-size: 0.729167vw;
+            font-family: Microsoft YaHei;
+            font-weight: 400;
+            color: #999999;
+            line-height: 2.222222vh;
+          }
+          .arrorw {
+            height: 2.222222vh;
+            width: 4.166667vw;
+            background: url("~@/assets/image/aboutUs/news-view-normal.png") no-repeat 0 0/100% 100% content-box;
+          }
+        }
+        .news-title {
+          text-align: left;
+        }
+      }
+    }
+    .industry-list {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 18.75vw;
+      margin-top: 6.018519vh;
+      text-align: left;
+      .industry-item {
+        flex: 1;
+        margin-right: 2.239583vw;
+        .item {
+          width: 29.6875vw;
+          margin-bottom: 5.740741vh;
+          .title {
+            font-size: 0.833333vw;
+            font-family: Microsoft YaHei;
+            font-weight: 400;
+            color: #333333;
+            line-height: 5.555556vh;
+            &:before {
+              content: "";
+              display: inline-block;
+              width: 0.572917vw;
+              height: 1.018519vh;
+              margin-right: 0.416667vw;
+              background: url("~@/assets/image/aboutUs/point-icon.png") no-repeat 0 0/100% 100% content-box;
+            }
+          }
+          .info {
+            font-size: 0.729167vw;
+            font-family: Microsoft YaHei;
+            font-weight: 400;
+            color: #999999;
+            line-height: 2.777778vh;
+            // 超两行省略号
+            text-overflow: -o-ellipsis-lastline;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+          }
+        }
+        .item:last-child {
+          margin-bottom: 0;
+        }
+
+      }
+    }
+    .more {
+      padding: 0 47.395833vw;
+      margin-top: 6.759259vh;
+      img {
+        cursor: pointer;
+      }
+    }
+  }
+  .bg__black {
+    background-color: #292929;
+  }
+}

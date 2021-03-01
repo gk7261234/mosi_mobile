@@ -1,0 +1,35 @@
+.detail-three {
+  .detail-three__program--top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 4.3vh;
+    .detail-three__program--top-left {
+      width: 25.1vw;
+      min-width: 400px;
+      .detail-three__section--program--each {
+        text-indent: 2em;
+        margin-bottom: 3vh;
+        .detail-three__section--program--each-title, .detail-three__section--program--each-desc {
+          font-size: 0.7vw;
+          line-height: 2.8vh;
+        }
+        .detail-three__section--program--each-desc {
+          color: #666666;
+        }
+        .detail-three__section--program--each-title {
+          color: #333333;
+        }
+      }
+    }
+    .detail-three__program--top-right img{
+      width: 36.3vw;
+    }
+  }
+  .program-img {
+    width: 100%;
+  }
+  .detail-three__header--logo img {
+    width: 2.5vw;
+  }
+}

@@ -1,0 +1,29 @@
+.detail-five {
+  .detail-five__section--program--each {
+    // text-indent: 1.5vw;
+    text-indent: 2em;
+    margin-bottom: 2.6vh;
+    .detail-five__section--program--each-title, .detail-five__section--program--each-desc {
+      font-size: 0.7vw;
+      line-height: 2.8vh;
+    }
+    .detail-five__section--program--each-title {
+      color: #333333;
+    }
+    .detail-five__section--program--each-desc {
+      color: #666666;
+    }
+  }
+  .program-img {
+    width: 100%;
+  }
+  .program-img--first {
+    margin-bottom: 5.4vh;
+  }
+  .program-img--second {
+    margin-bottom: 3.3vh;
+  }
+  .detail-five__header--logo img {
+    width: 10.7vw;
+  }
+}

@@ -1,0 +1,140 @@
+.visual-manage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: (80 / $baseHeight * $normalVh);
+  &:after {
+    content: '';
+    width: 290px;
+  }
+  .visual-manage--card {
+    width: 290px;
+    height: 312px;
+    border-radius: 4px;
+    margin-bottom: (39 / $baseHeight * $normalVh);
+    .visual-manage--card__header {
+      text-align: center;
+      img {
+        width: 10.9vw;
+      }
+      span {
+        display: inline-block;
+        margin-left: 6px;
+        vertical-align: middle;
+        font-size: 20px;
+        font-family: SourceHanSansCN;
+        font-weight: 500;
+        color: #999999;
+        line-height: 15px;
+      }
+    }
+    .visual-manage--card__content--mask {
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      color: #ffffff;
+      padding: 52px 20px 3.055556vh;
+      background-color: rgba(51, 51, 51, 0.35);
+      position: relative;
+      .visual-manage--card__content--mask-title {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 1.851852vh;
+      }
+      .visual-manage--card__content--mask--desc {
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 1px;
+      }
+      .visual-manage--card__content--mask-btn {
+        width: 120px;
+        height: 32px;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 16px;
+        font-size: 16px;
+        font-weight: 400;
+        color: $normalColor;
+        position: absolute;
+        bottom: 3.055556vh;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &:hover,
+        &:focus,
+        &:active {
+          background: $titleHoverColor;
+          border: $titleHoverColor;
+          color: #ffffff;
+        }
+      }
+    }
+    @media only screen and (max-width: 1803px) and (min-width: 1600px) {
+      width: 230px;
+      height: (230 / 270 * 312px);
+      margin-bottom: (33 / $baseHeight * $normalVh);
+      transition: all 0.3s;
+      .visual-manage--card__header span {
+        font-size: 18px;
+      }
+      .visual-manage--card__content--mask {
+        padding: 30px 20px 3.055556vh;
+        .visual-manage--card__content--mask-title {
+          font-size: 18px;
+        }
+        .visual-manage--card__content--mask--desc {
+          font-size: 14px;
+        }
+      }
+    }
+    @media only screen and (max-width: 1600px) and (min-width: 1200px) {
+      width: 210px;
+      height: (210 / 270 * 312px);
+      margin-bottom: (30 / $baseHeight * $normalVh);
+      transition: all 0.3s;
+      .visual-manage--card__header span {
+        font-size: 18px;
+      }
+      .visual-manage--card__content--mask {
+        .visual-manage--card__content--mask-title {
+          font-size: 18px;
+          margin-bottom: 0.5vh;
+        }
+      }
+    }
+
+    border: 1px solid #eeeeee;
+    // cursor: pointer;
+    ::v-deep .ivu-card-body {
+      height: calc(100% - 77px);
+      padding: 0;
+    }
+    .visual-manage--card__content {
+      height: 100%;
+    }
+  }
+  // :first-child
+  .visual-manage--card {
+    cursor: pointer;
+    &:hover {
+      background: rgba(254, 182, 105, 0.05);
+      border-radius: 4px;
+      border: 1px solid rgba(254, 182, 105, 1);
+      box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.06);
+      .visual-manage--card__content--mask {
+        background: linear-gradient(0deg, rgba(255, 147, 30, 0.15) 0%, rgba(255, 147, 30, 0.5) 100%);
+      }
+      .visual-manage--card__content--mask-btn {
+        background: $titleHoverColor;
+        border: $titleHoverColor;
+        color: #ffffff;
+      }
+    }
+  }
+  .visual-manage--card:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
+::v-deep .ivu-btn>span {
+  vertical-align: initial;
+}

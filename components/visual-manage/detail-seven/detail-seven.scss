@@ -1,0 +1,39 @@
+.detail-seven {
+  .detail-seven__program--top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 4.3vh;
+    .detail-seven__program--top-left {
+      width: 30.4vw;
+      min-width: 400px;
+      .detail-seven__section--program--each {
+        // text-indent: 2em;
+        margin-bottom: 2.9vh;
+        border: 1px solid #EEEEEE;
+        padding: 1.5vh 1.4vw 1.8vh;
+        .detail-seven__section--program--each-title, .detail-seven__section--program--each-desc {
+          font-size: 0.7vw;
+          line-height: 2.8vh;
+        }
+        .detail-seven__section--program--each-desc {
+          color: #999999;
+        }
+        .detail-seven__section--program--each-title {
+          color: #333333;
+        }
+      }
+    }
+    .detail-seven__program--top-right img{
+      width: 30.5vw;
+      min-width: 400px;
+    }
+  }
+  .program-img {
+    width: 100%;
+    min-width: 400px;
+  }
+  .detail-seven__header--logo img {
+    width: 10.7vw;
+  }
+}

@@ -1,0 +1,107 @@
+.detail-one {
+  padding-top: 5.555556vh;
+  .detail-one-breadcrumb {
+    margin-bottom: 3.981481vh;
+  }
+  .detail-one__header {
+    display: flex;
+    align-items: center;
+    margin-left: -20px;
+    margin-bottom: 5.092593vh;
+    .detail-one__header--logo {
+      padding: 2.4vh 1.9vw;
+      border: 1px solid #eeeeee;
+      margin-right: 39px;
+      text-align: center;
+      img {
+        width: 2.5vw;
+      }
+      span {
+        display: inline-block;
+        margin-left: 0.260417vw;
+        font-size: 1.041667vw;
+        font-family: SourceHanSansCN;
+        font-weight: 500;
+        color: $footerColor;
+      }
+    }
+    .detail-one__header--desc {
+      .detail-one__header--desc-title {
+        font-size: 1.25vw;
+        font-weight: bold;
+        color: $titleColor;
+        margin-bottom: 0.925926vh;
+      }
+      .detail-one__header--desc-date {
+        font-size: 0.833333vw;
+        font-weight: 400;
+        color: $footerColor;
+      }
+    }
+  }
+  .detail-one__content {
+    section {
+      padding-bottom: 7.222222vh;
+    }
+  }
+  .detail-one__section-title {
+    font-size: 0.9375vw;
+    font-weight: bold;
+    color: $titleColor;
+    line-height: 30px;
+    position: relative;
+    margin-bottom: 2.777778vh;
+    &:before {
+      content: "";
+      width: 4px;
+      height: 2.037037vh;
+      background: $titleHoverColor;
+      position: absolute;
+      left: -15px;
+      top: 50%;
+      transform: translateY(-45%);
+    }
+  }
+  .detail-one__section--desc {
+    color: $normalColor;
+    font-size: 0.729167vw;
+  }
+  .detail-one__section--desc::first-letter {
+    font-size: 1.25vw;
+  }
+  .detail-one__section--program {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5.925926vh;
+    img {
+      width: 31.25vw;
+      margin-left: 3.385417vw;
+    }
+    .detail-one__section--program-content {
+      text-indent: 1.5vw;
+    }
+  }
+  .program-img {
+    width: 100%;
+  }
+  .program-img--bottom {
+    margin-top: 5.555556vh;
+  }
+  .detail-one__section-content {
+    font-size: 0.729167vw;
+    p {
+      text-indent: 2em;
+    }
+  }
+  .detail-one__section-content-each {
+    margin-bottom: 2.962963vh;
+  }
+  .detail-one__section-content--title {
+    color: $titleColor;
+    line-height: 2.777778vh;
+  }
+  .detail-one__section-content--desc {
+    line-height: 2.777778vh;
+    color: $normalColor;
+  }
+}

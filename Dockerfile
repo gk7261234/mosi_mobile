@@ -7,8 +7,8 @@ WORKDIR /app
 # Expose the app port
 EXPOSE 8181
 
-# RUN npm config set registry https://registry.npm.taobao.org
+RUN npm config set registry http://registry.cnpmjs.org
 
 RUN npm install
-RUN npm run build
+# RUN npm run build
 CMD ["npm", "start"]

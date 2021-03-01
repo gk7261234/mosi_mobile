@@ -1,0 +1,116 @@
+.solute-case {
+  .solute-case__header {
+    background: url("~@/assets/image/solution/project-banner.png") no-repeat 0 0 /100%
+      100% content-box;
+  }
+  .solute-case__content {
+    padding: 17vh 0 21vh;
+    width: 1207px;
+    margin: 0 auto;
+    li {
+      vertical-align: top;
+      height: 670px;
+      border: 1px solid #e5e7eb;
+      display: inline-block;
+      padding-top: 56px;
+      position: relative;
+      text-align: center;
+      .item-icon {
+        height: 44px;
+        margin-bottom: 28px;
+      }
+      .item-title {
+        font-size: 24px;
+      }
+    }
+    .item--bg-text {
+      transform: rotate(90deg);
+      -moz-transform: rotate(90deg);
+      -webkit-transform: rotate(90deg);
+      font-weight: bold;
+      display: block;
+      color: #EEEDED;
+      font-size: 36px;
+      position: absolute;
+      left: 90px;
+      bottom: 248px;
+      width: 380px;
+    }
+    .active--item {
+      text-align: left;
+      padding-left: 27px;
+      padding-right: 28px;
+      width: 327px;
+      transition: all 0.8s;
+      -webkit-transition: all 0.8s;
+    }
+    .item--active-title {
+      color: #FF931E;
+    }
+    .item--default-title {
+      color: #333333;
+    }
+    .item--line {
+      height: 4px;
+      background-color: #ff931e;
+    }
+    .item--line-small {
+      width: 100px;
+    }
+    .item--line-large {
+      width: 140px;
+    }
+    .item--img {
+      // height: 481px;
+      // overflow: hidden;
+      // width: 218px;
+      img:nth-of-type(1) {
+        height: 480px;
+      }
+      img:nth-of-type(1),
+      img:nth-of-type(2) {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+      }
+      img:nth-of-type(3) {
+        position: absolute;
+        bottom: 65px;
+        right: 0;
+      }
+    }
+    .item--text {
+        margin-top: 115px;
+        position: relative;
+        z-index: 5;
+    }
+    .item--text--single {
+      width: 270px;
+      line-height: 40px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      &:hover {
+          cursor: pointer;
+          color: #FF9C0F;
+      }
+    }
+    .item--text-count {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-color: #FF9C0F;
+        border-radius: 50%;
+        color: white;
+        margin-right: 10px;
+        text-align: center;
+        line-height: 20px;
+    }
+    .default--item {
+        transition: all 0.8s;
+        -webkit-transition: all 0.8s;
+        width: 220px;
+    }
+  }
+}

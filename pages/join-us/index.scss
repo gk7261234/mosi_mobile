@@ -1,0 +1,86 @@
+.join-us {
+  font-family: $fontFamily;
+  .join-us__header {
+      background: url("~@/assets/image/joinUs/joinus-banner.png") no-repeat 0 0 /100% 100% content-box;
+  }
+  .join-us__content {
+      min-width: 640px;
+      padding: 11.1vh 18.75vw 13vh;
+      .join-us__content--work-type {
+          border: 1px solid #E5E7EB;
+          padding: 4.8vh 0 0.6vh 2.7vw;
+          .work-type--single {
+              display: flex;
+              margin-bottom: 3.8vh;
+              font-size: $smallSize;
+              color: #31363A;
+              height: 3vh;
+              line-height: 3vh;
+              .single--name {
+                  margin-left: 0.5vw;
+                  color: $titleColor;
+                  padding: 0 1.3vw;
+                  text-align: center;
+                  // &:hover {
+                  //     background-color: #FF9C0F;
+                  //     border-radius: 0.8vw;
+                  //     color: white;
+                  // }
+              }
+              .single-all {
+                  // cursor: pointer;
+                  margin-left: 2.6vw;
+              }
+              .job-type--selected {
+                  background-color: #FF9C0F;
+                  border-radius: 0.8vw;
+                  color: white;
+              }
+          }
+      }
+      .join-us__content--work-detail {
+          width: 100%;
+          margin-top: 5.6vh;
+          .work-detail--single {
+              border: 1px solid #E5E7EB;
+              margin-top: -1px;
+              padding: 5vh 2.7vw;
+              .single__header {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  .single__header--name {
+                      font-size: $normalSize;
+                      color: $titleColor;
+                  }
+                  .single__header--button {
+                      cursor: pointer;
+                      img {
+                          width: 4.2vw;
+                      }
+                  }
+              }
+              .single__content {
+                  margin-top: 2.7vh;
+                  font-size: $smallSize;
+                  color: $normalColor;
+                  line-height: 3.3vh;
+                  .single__content--duty {
+                      margin-bottom: 4.4vh;
+                  }
+                  .single__content--qualifications {
+                      margin-bottom: 3.2vh;
+                  }
+                  .single__content__footer {
+                      font-size: $smallSize;
+                      color: $titleColor;
+                      line-height: 3.7vh;
+                      .footer--email {
+                          color: #FF9C0F;
+                      }
+                  }
+              }
+          }
+      }
+  }
+}

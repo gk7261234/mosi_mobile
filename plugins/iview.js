@@ -1,6 +1,6 @@
 import Vue from 'vue'
-// import iView from 'iview'
 import {
+  Button,
   Layout,
   Menu,
   Submenu,
@@ -9,10 +9,14 @@ import {
   Icon,
   Row,
   Col,
+  Breadcrumb,
+  BreadcrumbItem,
+  Card,
+  Tooltip,
 } from 'iview'
-// import locale from 'iview/dist/locale/en-US' // Change locale, check node_modules/iview/dist/locale
 
 const components = {
+  Button,
   Layout,
   'i-menu': Menu,
   Submenu,
@@ -21,6 +25,10 @@ const components = {
   Icon,
   Row,
   Col,
+  Breadcrumb,
+  BreadcrumbItem,
+  Card,
+  Tooltip,
 }
 
 const IviewModule = {
@@ -30,5 +38,3 @@ const IviewModule = {
 Object.keys(IviewModule).forEach((key) => {
   Vue.component(key, IviewModule[key])
 })
-
-// Vue.use(iView)

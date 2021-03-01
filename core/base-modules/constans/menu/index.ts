@@ -44,7 +44,7 @@ export const MenuSiderListCn: IMenu = {
     },
     {
       name: '加入我们',
-      path: '/join',
+      path: '/join-us',
       meta: {
         title: '加入我们',
         processEnv: ProcessEnv.all,

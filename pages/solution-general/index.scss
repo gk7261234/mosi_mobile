@@ -1,0 +1,17 @@
+.solution-general {
+  ::v-deep .ivu-menu-item {
+    padding-left: 22px !important;
+  }
+  .tabs {
+    position: relative;
+    height: 60px;
+  }
+  .solution-general__header {
+    background: url("~@/assets/image/solution/general/digtal-service-banner.png") no-repeat 0 0 /100% 100% content-box;
+  }
+  .solution-general__content {
+    display: flex;
+    justify-content: space-between;
+    padding: 5.6vh 18.75vw 12vh;
+  }
+}

@@ -1,0 +1,25 @@
+.value-list-component {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .value-list-component--box {
+      width: 19.7vw;
+      position: relative;
+      // border: 1px solid #EEEEEE;
+      min-width: 250px;
+      margin-bottom: 10px;
+      background: url("~@/assets/image/successStories/detail/bg.png") no-repeat 0 0 /100% 100% content-box;
+      .value-list-component--box-img {
+        width: 2.3vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .value-list-component--box-desc {
+        padding: 3.4vh 1.6vw;
+        font-size: 0.7vw;
+        line-height: 2.2vh;
+        color: #666666;
+      }
+    }
+  }
