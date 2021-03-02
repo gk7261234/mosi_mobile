@@ -1,6 +1,7 @@
-import { Component, Vue, Prop } from 'vue-property-decorator'
-import * as MenuDto from '@core/base-modules/domain/menu-domian/entity/MenuInfoDto'
+import { Component, Vue, Watch } from 'vue-property-decorator'
+import { MenuSiderListCn } from '@core/base-modules/constans/menu'
 import { SlouteSubMenu } from '@core/base-modules/constans/soluteCase'
+import { Route } from 'vue-router'
 import SystemSubmenu from './big-data-platform/big-data-platform.vue'
 @Component({
   name: 'MenuTab',
@@ -9,15 +10,18 @@ import SystemSubmenu from './big-data-platform/big-data-platform.vue'
   },
 })
 export default class MenuTab extends Vue {
-  private SlouteSubMenu = SlouteSubMenu
-  @Prop()
-  private MenuInfo!: MenuDto.MenuModal
+  private ActiveName = ''
+  @Watch('$route', { immediate: true })
+  WatchRoute(_route: Route) {
+    if (_route.name) {
+      this.ActiveName = _route.name
+    }
+  }
 
-  @Prop()
-  private ActiveName!: string
+  private SlouteSubMenu = SlouteSubMenu
+  private MenuInfo = MenuSiderListCn
 
   private toPage(_route: string) {
-    // let currentPath = this.$route
     _route &&
       this.$router.push({
         path: _route,

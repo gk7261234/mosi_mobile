@@ -5,7 +5,7 @@
     <Submenu
       name="产品体系"
       :class="[
-        ActiveName === '产品体系' ? 'menu-item-active' : '',
+        ActiveName === 'product-system' ? 'menu-item-active' : '',
         'propduct-system--menu',
       ]"
     >
@@ -18,7 +18,7 @@
     <Submenu
       name="解决方案"
       :class="[
-        ActiveName === '解决方案' ? 'menu-item-active' : '',
+        ActiveName === 'solute-case' ? 'menu-item-active' : '',
         'solute-case',
       ]"
     >
@@ -53,7 +53,7 @@
     <MenuItem
       v-for="item in MenuInfo.MenuItemList"
       :key="item.name"
-      :name="item.name"
+      :name="item.title"
       :to="item.path"
       >{{ item.name }}
     </MenuItem>

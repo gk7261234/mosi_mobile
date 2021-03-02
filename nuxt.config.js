@@ -1,7 +1,11 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable nuxt/no-cjs-in-config */
 import { resolve } from 'path'
 const TerserPlugin = require('terser-webpack-plugin')
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const app = require('./package.json')
 export default {
+  version: app.name,
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: '魔思科技',
@@ -37,7 +41,7 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxtjs/style-resources'],
+  modules: ['@nuxtjs/style-resources', 'nuxt-ssr-cache'],
   styleResources: {
     scss: [
       'assets/styles/reset.scss',
@@ -50,44 +54,62 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     analyze: true,
-    hardSource: true,
+    // hardSource: true,
     extractCSS: true,
+    transpile: [/^iview/],
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    extend(config, { isClient, loaders: { vue } }) {
+      vue.transformAssetUrls.video = ['src', 'poster']
+    },
     optimization: {
+      minimize: true,
       splitChunks: {
         minSize: 10000,
         maxSize: 250000,
+        cacheGroups: {
+          default: {
+            name: 'common',
+            chunks: 'initial',
+            minChunks: 2, // 模块被引用2次以上的才抽离
+            priority: -20,
+          },
+          vendors: {
+            // 拆分第三方库（通过npm|yarn安装的库）
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendor',
+            chunks: 'initial',
+            priority: -10,
+          },
+        },
       },
       minimizer: [
         new TerserPlugin({
           terserOptions: {
-            // 开启缓存
             cache: true,
-            // 开启多进程打包
             parallel: true,
-            // 启动source-map
             sourceMap: true,
             warnings: false,
             output: {
               comments: false,
             },
             compress: {
-              // 删除无用的代码
               unused: true,
-              // 删除debugger
               drop_debugger: true,
-              // 移除console
               drop_console: true,
-              // 移除无用的代码
               dead_code: true,
               pure_funcs: ['console.log'],
             },
           },
         }),
+        new OptimizeCSSAssetsPlugin({
+          assetNameRegExp: /\.css$/g,
+          cssProcessor: require('cssnano'),
+          cssProcessorPluginOptions: {
+            preset: ['default', { discardComments: { removeAll: true } }],
+          },
+          canPrint: true,
+        }),
       ],
-    },
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    extend(config, { isClient, loaders: { vue } }) {
-      vue.transformAssetUrls.video = ['src', 'poster']
     },
     babel: {
       babelrc: true,
@@ -95,7 +117,22 @@ export default {
     assetFilter(assetFilename) {
       return assetFilename.endsWith('.js')
     },
-    transpile: [/^iview/],
+  },
+  cache: {
+    useHostPrefix: false, // 是否使用主机前缀 如果提供了多个主机名 可以设置为true
+    pages: [
+      // 将要缓存的页面
+      // 使用正则匹配首页
+      /^\/$/,
+    ],
+    store: {
+      // store 有其他type存储的方式 具体可查看 https://github.com/arash16/nuxt-ssr-cache#readme
+      type: 'memory',
+      // 缓存的最大的页面
+      max: 100,
+      // 缓存的时间 到期将过期
+      ttl: 60 * 60 * 24 * 7,
+    },
   },
   alias: {
     '@pages': resolve(__dirname, './pages'),

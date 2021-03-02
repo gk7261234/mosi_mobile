@@ -16,6 +16,7 @@ export interface IMetaBase {
 
 export interface IMenuBase {
   name: string
+  title: string
   path: string
   meta: IMetaBase
   children?: IMenuBase[]
@@ -59,6 +60,7 @@ export class MetaBase implements IMetaBase {
 
 export class MenuBase implements IMenuBase {
   name = ''
+  title = ''
   path = ''
   meta: IMetaBase = new MetaBase()
   children?: IMenuBase[]

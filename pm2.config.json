@@ -1,0 +1,6 @@
+[{
+  "name": "server_name",
+  "script": "./node_modules/nuxt/bin/nuxt-start",
+  "exec_mode": "cluster",
+  "instances": 2
+}]
