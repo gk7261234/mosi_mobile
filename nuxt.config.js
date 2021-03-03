@@ -53,7 +53,7 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    analyze: true,
+    // analyze: true,
     // hardSource: true,
     extractCSS: true,
     transpile: [/^iview/],
@@ -140,8 +140,8 @@ export default {
     '@core': resolve(__dirname, './core'),
     '@utils': resolve(__dirname, './utils'),
   },
-  // server: {
-  //   port: 8181,
-  //   host: '0.0.0.0',
-  // },
+  server: {
+    port: 8183,
+    host: '0.0.0.0',
+  },
 }
