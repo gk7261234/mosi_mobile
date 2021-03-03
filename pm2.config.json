@@ -1,5 +1,5 @@
 [{
-  "name": "server_name",
+  "name": "mosi_pc",
   "script": "./node_modules/nuxt/bin/nuxt-start",
   "exec_mode": "cluster",
   "instances": 2
