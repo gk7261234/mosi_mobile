@@ -1,6 +1,6 @@
 <template>
   <div class="dropdown-content">
-    <Menu width="auto">
+    <i-menu width="auto">
       <template v-for="(menuItem, index) in MenuJson">
         <ChildMenu
           v-if="menuItem.children && menuItem.children.length !== 0"
@@ -17,7 +17,7 @@
           <span>{{ menuItem.name }}</span>
         </MenuItem>
       </template>
-    </Menu>
+    </i-menu>
   </div>
 </template>
 <script lang="ts" src="./menu-tab.ts"></script>

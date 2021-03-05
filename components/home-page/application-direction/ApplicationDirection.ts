@@ -14,8 +14,8 @@ export default class CompanyIntrodution extends Vue {
     loadPrexNextAmount: 5,
     coverflowEffect: {
       rotate: 0,
-      stretch: 10,
-      depth: 10,
+      stretch: 15,
+      depth: 25,
       modifier: 10,
       slideShadows: false,
     },
@@ -60,7 +60,42 @@ export default class CompanyIntrodution extends Vue {
     // this.swiper.lazy.loadInSlide(6);
   }
 
+  private currentIndex = 0
+  private myList = [
+    {
+      text1: '海量数据检索，支撑企业决策制定。',
+      text2: '优化存储成本，提高报表生成性能。',
+      text3: '防止数据泄露，维护用户数据安全。',
+      img: require('../../../assets/images/homePage/app-storage.png'),
+    },
+    {
+      text1: '海量数据检索，支撑企业决策制定。',
+      text2: '优化存储成本，提高报表生成性能。',
+      text3: '防止数据泄露，维护用户数据安全。',
+      img: require('../../../assets/images/homePage/app-storage.png'),
+    },
+    {
+      text1: '海量数据检索，支撑企业决策制定。',
+      text2: '优化存储成本，提高报表生成性能。',
+      text3: '防止数据泄露，维护用户数据安全。',
+      img: require('../../../assets/images/homePage/app-storage.png'),
+    },
+    {
+      text1: '海量数据检索，支撑企业决策制定。',
+      text2: '优化存储成本，提高报表生成性能。',
+      text3: '防止数据泄露，维护用户数据安全。',
+      img: require('../../../assets/images/homePage/app-storage.png'),
+    },
+    {
+      text1: '海量数据检索，支撑企业决策制定。',
+      text2: '优化存储成本，提高报表生成性能。',
+      text3: '防止数据泄露，维护用户数据安全。',
+      img: require('../../../assets/images/homePage/app-storage.png'),
+    },
+  ]
+
   private onMenuItem(_index: number) {
+    this.currentIndex = _index
     this.MenuItems = this.MenuItems.map((item, index) => {
       if (_index === index) {
         item.isActive = true

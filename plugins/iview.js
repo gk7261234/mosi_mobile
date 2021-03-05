@@ -1,7 +1,40 @@
 import Vue from 'vue'
-import iView from 'iview'
-import locale from 'iview/dist/locale/en-US' // Change locale, check node_modules/iview/dist/locale
+import {
+  Button,
+  Layout,
+  Menu,
+  Submenu,
+  MenuGroup,
+  MenuItem,
+  Icon,
+  Row,
+  Col,
+  Breadcrumb,
+  BreadcrumbItem,
+  Card,
+  Tooltip,
+} from 'iview'
 
-Vue.use(iView, {
-  locale,
+const components = {
+  Button,
+  Layout,
+  'i-menu': Menu,
+  Submenu,
+  MenuGroup,
+  MenuItem,
+  Icon,
+  Row,
+  Col,
+  Breadcrumb,
+  BreadcrumbItem,
+  Card,
+  Tooltip,
+}
+
+const IviewModule = {
+  ...components,
+}
+
+Object.keys(IviewModule).forEach((key) => {
+  Vue.component(key, IviewModule[key])
 })

@@ -21,6 +21,22 @@
       </div>
     </div>
     <div class="swiper">
+      <template v-for="(item, index) in myList">
+        <transition-group :key="index" tag="div" name="list" class="scroll">
+          <div
+            v-show="currentIndex === index"
+            :key="index"
+            class="swiper__item"
+          >
+            <img :src="item.img" alt="" />
+            <div>{{ item.text1 }}</div>
+            <div>{{ item.text2 }}</div>
+            <div>{{ item.text3 }}</div>
+          </div>
+        </transition-group>
+      </template>
+    </div>
+    <!-- <div class="swiper">
       <swiper
         ref="mySwiper"
         :options="swiperOptions"
@@ -42,7 +58,7 @@
           </div>
         </swiper-slide>
       </swiper>
-    </div>
+    </div> -->
   </div>
 </template>
 <script lang="ts" src="./ApplicationDirection.ts"></script>
