@@ -79,13 +79,6 @@ export const MenuJson = [
                 level: 'menu-level4',
               },
               {
-                name: '数据质量管理平台',
-                path: '/',
-                active: false,
-                icon: '',
-                level: 'menu-level4',
-              },
-              {
                 name: '数据资产管理平台',
                 path: '/',
                 active: false,

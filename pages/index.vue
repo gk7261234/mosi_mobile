@@ -19,6 +19,7 @@
 
     <!-- 魔思科技 start -->
     <CompanyProfile class="mosi-company-profile" />
+    <ApplicationDirection class="mosi-application-direction" />
     <Chronicles class="mosi-chronicles" />
     <CooperativePartner class="mosi-cooperative-partner" />
     <!-- 魔思科技 start -->
@@ -28,12 +29,12 @@
 <style lang="scss" scoped>
 .container {
   .mosi-banner {
-    height: 100vh;
+    height: 70.164918vh;
     width: 100vw;
     background-color: #000;
     .banner-swiper {
       .banner-swiper-img {
-        height: 100vh;
+        height: 70.164918vh;
         width: 100vw;
       }
     }
@@ -59,6 +60,11 @@
     height: 72.713643vh;
     background-color: #fff;
     padding: 3.598201vh 5.333333vw;
+  }
+  .mosi-application-direction {
+    width: 100vw;
+    height: 72.713643vh;
+    background-color: #fff;
   }
 }
 </style>
