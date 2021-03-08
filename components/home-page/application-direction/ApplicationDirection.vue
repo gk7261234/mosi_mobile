@@ -13,7 +13,7 @@
               'flex-box__content-menu_item': true,
               selected: item.isActive,
             }"
-            @click="onMenuItem(index)"
+            @click="clickToMove(item, index)"
           >
             {{ item.title }}
           </div>
@@ -21,8 +21,25 @@
       </div>
     </div>
     <div class="swiper">
-      <template v-for="(item, index) in myList">
-        <transition-group :key="index" tag="div" name="list" class="scroll">
+      <div
+        v-for="(item, index) in myList"
+        :key="index"
+        :style="styles(item, index)"
+        class="swiper__item"
+      >
+        <img :src="item.img" alt="" />
+        <div>{{ item.text1 }}</div>
+        <div>{{ item.text2 }}</div>
+        <div>{{ item.text3 }}</div>
+      </div>
+      <!-- <template v-for="(item, index) in myList">
+        <transition-group
+          :key="index"
+          tag="div"
+          name="list"
+          class="scroll"
+          @before-enter="leftOrRight($event, index)"
+        >
           <div
             v-show="currentIndex === index"
             :key="index"
@@ -34,7 +51,7 @@
             <div>{{ item.text3 }}</div>
           </div>
         </transition-group>
-      </template>
+      </template> -->
     </div>
     <!-- <div class="swiper">
       <swiper

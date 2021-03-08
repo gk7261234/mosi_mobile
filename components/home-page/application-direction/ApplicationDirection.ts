@@ -1,4 +1,6 @@
 import { Component, Vue } from 'vue-property-decorator'
+import Translate, { Edirection, EUnit, IInputBase } from '@utils/translate'
+import * as homepageDesc from '@core/base-modules/constans/homePage'
 @Component({
   name: 'CompanyIntrodution',
 })
@@ -52,14 +54,6 @@ export default class CompanyIntrodution extends Vue {
     },
   ]
 
-  get swiper() {
-    return (this.$refs.mySwiper as any).swiperInstance
-  }
-
-  mounted() {
-    // this.swiper.lazy.loadInSlide(6);
-  }
-
   private currentIndex = 0
   private myList = [
     {
@@ -94,6 +88,19 @@ export default class CompanyIntrodution extends Vue {
     },
   ]
 
+  private developBottomArr: number[] = []
+  private developLeftArr: number[] = []
+  private tranItemArr: any = []
+
+  get swiper() {
+    return (this.$refs.mySwiper as any).swiperInstance
+  }
+
+  mounted() {
+    // this.swiper.lazy.loadInSlide(6);
+    this.tranItemArr = document.querySelectorAll('swiper__item')
+  }
+
   private onMenuItem(_index: number) {
     this.currentIndex = _index
     this.MenuItems = this.MenuItems.map((item, index) => {
@@ -110,5 +117,35 @@ export default class CompanyIntrodution extends Vue {
   private handleSwiperReadied() {
     // console.log("加载完成：");
     this.swiper.slideTo(4, 100, false)
+  }
+
+  private rightClick: boolean = false
+  private leftClick: boolean = false
+  private clickToMove(_item: any, index: number) {
+    if (this.currentIndex > index) {
+      this.rightClick = false
+      // 左
+    } else {
+      // 右
+
+      this.rightClick = true
+    }
+
+    this.currentIndex = index
+  }
+
+  private transMove(_add: boolean) {
+    for (let index = 0; index < this.tranItemArr.length; index++) {
+      const element = this.tranItemArr[index]
+      if (index <= 1) {
+        element.style.left = `${element.offsetLeft - 500}px`
+      }
+    }
+  }
+
+  private styles(index: number) {
+    const left: string = `${index * 80}vm`
+    // const bottom: string = `${item.bottom / 10.8}vh`
+    return `left:${left}`
   }
 }

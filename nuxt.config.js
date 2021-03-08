@@ -52,5 +52,6 @@ export default {
     '@pages': resolve(__dirname, './pages'),
     '@components': resolve(__dirname, './components'),
     '@core': resolve(__dirname, './core'),
+    '@utils': resolve(__dirname, './utils'),
   },
 }
