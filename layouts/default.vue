@@ -1,6 +1,11 @@
 <template>
-  <Layout class="mosi-layout">
-    <Header class="mosi-layout__header header-top">
+  <Layout class="mosi-layout" @scroll.native="handleScroll($event)">
+    <Header
+      :class="[
+        'mosi-layout__header',
+        distance > 0 ? 'header-other' : 'header-top',
+      ]"
+    >
       <global-header></global-header>
     </Header>
     <Content class="mosi-layout__content">

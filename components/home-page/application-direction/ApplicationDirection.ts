@@ -1,6 +1,4 @@
 import { Component, Vue } from 'vue-property-decorator'
-import Translate, { Edirection, EUnit, IInputBase } from '@utils/translate'
-import * as homepageDesc from '@core/base-modules/constans/homePage'
 @Component({
   name: 'CompanyIntrodution',
 })
@@ -80,12 +78,6 @@ export default class CompanyIntrodution extends Vue {
       text3: '防止数据泄露，维护用户数据安全。',
       img: require('../../../assets/images/homePage/app-storage.png'),
     },
-    {
-      text1: '海量数据检索，支撑企业决策制定。',
-      text2: '优化存储成本，提高报表生成性能。',
-      text3: '防止数据泄露，维护用户数据安全。',
-      img: require('../../../assets/images/homePage/app-storage.png'),
-    },
   ]
 
   private developBottomArr: number[] = []
@@ -98,7 +90,7 @@ export default class CompanyIntrodution extends Vue {
 
   mounted() {
     // this.swiper.lazy.loadInSlide(6);
-    this.tranItemArr = document.querySelectorAll('swiper__item')
+    this.tranItemArr = document.querySelectorAll('.swiper-container')
   }
 
   private onMenuItem(_index: number) {
@@ -119,33 +111,45 @@ export default class CompanyIntrodution extends Vue {
     this.swiper.slideTo(4, 100, false)
   }
 
-  private rightClick: boolean = false
-  private leftClick: boolean = false
-  private clickToMove(_item: any, index: number) {
-    if (this.currentIndex > index) {
-      this.rightClick = false
-      // 左
-    } else {
-      // 右
-
-      this.rightClick = true
-    }
-
-    this.currentIndex = index
+  private clickToMove(_item: any, _seleIndex: number) {
+    this.MenuItems.map((_item: any, _index: number) => {
+      if (_seleIndex === _index) {
+        _item.isActive = true
+      } else {
+        _item.isActive = false
+      }
+      return _item
+    })
+    this.transMove(_seleIndex)
   }
 
-  private transMove(_add: boolean) {
+  private transMove(_seleIndex: number) {
     for (let index = 0; index < this.tranItemArr.length; index++) {
       const element = this.tranItemArr[index]
-      if (index <= 1) {
-        element.style.left = `${element.offsetLeft - 500}px`
-      }
+      element.style.left = `${
+        (element.offsetLeft / 375) * 100 +
+        (this.currentIndex - _seleIndex) * 100
+      }vw`
+      // if (index === _seleIndex) {
+      //   element.style.transform = 'scale(1.12)'
+      // } else {
+      //   element.style.transform = 'scale(1)'
+      // }
     }
+    this.currentIndex = _seleIndex
   }
 
   private styles(index: number) {
-    const left: string = `${index * 80}vm`
-    // const bottom: string = `${item.bottom / 10.8}vh`
+    let left: string = ''
+    // if (index === 3) {
+    //   left = `-62.85vw`
+    // } else {
+    //   left = `${index * 100}vw`
+    // }
+    left = `${index * 100}vw`
+    // if (index === 0) {
+    //   return `left:${10.666667}vw;transform:scale(1.12)`
+    // }
     return `left:${left}`
   }
 }

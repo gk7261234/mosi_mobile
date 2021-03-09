@@ -27,8 +27,8 @@ export default class HomePage extends Vue {
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
-      bulletClass: 'default-bullet',
-      bulletActiveClass: 'active-bullet',
+      // bulletClass: 'default-bullet',
+      // bulletActiveClass: 'active-bullet',
     },
     on: {
       slideChange() {

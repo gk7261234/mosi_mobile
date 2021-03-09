@@ -8,8 +8,17 @@
     width: 31.466667vw;
     height: 3.448276vh;
   }
-  .menu {
-    width: 5.333333vw;
-    height: 2.448276vh;
+  .menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 2.998501vh;
+    div {
+      transform-origin: 2px 2px;
+      transition: all .5s;
+      width: 8.266667vw;
+      border: 2px solid #CCCCCC;
+      border-radius: 1px;
+    }
   }
 }

@@ -1,11 +1,16 @@
 <template>
   <div class="global-header">
     <img class="logo" src="~@/assets/images/layout/logo.png" />
-    <img
+    <!-- <img
       class="menu"
       src="~@/assets/images/layout/menu.png"
       @click="onSwitchMenu"
-    />
+    /> -->
+    <div class="menu-icon" @click="onSwitchMenu">
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </div>
     <MenuTab v-show="isShowMenu" />
   </div>
 </template>
